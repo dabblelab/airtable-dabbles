@@ -20,7 +20,7 @@ const getRecord = async (table_name, field_name, field_value) => {
     return await getFirstByFilter(table_name, filter);
 }
 
-getRecord("Table 1", "record_id", "recdp31MWmoLD8NO1").then(result => {
+getRecord("Table 1", "record_id", process.env.AIRTABLE_BASE_ID).then(result => {
     console.log(result);
 });
 
